@@ -5,6 +5,10 @@ body {
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
 }
+.homeimg{
+    background-size: 100%;
+    /* overflow-x: hidden; */
+}
 
 * {
     margin: 0;
@@ -15,10 +19,10 @@ body {
 }
 
 nav {
-    background-color: #24262b;
+    background-color: #0c134c;
     height: 80px;
     width: 100%;
-    margin-bottom: 24%;
+    /* margin-bottom: 24%; */
 }
 
 label.logo {
@@ -48,6 +52,14 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+/* .card{
+   background-color: rgb(237, 107, 249);
+} */
+.cardfooter{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
 
 
 
@@ -55,7 +67,7 @@ nav ul li a {
 .footer {
     background-color: #0c134c;
     padding: 70px 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     margin-bottom: 0;
     padding-bottom: 0;
