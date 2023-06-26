@@ -1,0 +1,35 @@
+{
+  "attendance": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "studentName": "Aarav",
+      "date": "2023-06-24",
+      "status": "Present",
+      "id": 2
+    }
+  ],
+  "fees": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "studentInfo": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "card": "926050",
+      "expiry": "23022025",
+      "cvv": "1990",
+      "id": 2
+    }
+  ]
+}

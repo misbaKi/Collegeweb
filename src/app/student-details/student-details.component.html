@@ -1,0 +1,13 @@
+<form [formGroup]="studInfoForm">
+    <label for="card">Card Number</label>
+    <input type="text" id="card" formControlName="card" required>
+  
+    <label for="expiry">Expiry Date</label>
+    <input type="text" id="expiry" formControlName="expiry" required>
+  
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" formControlName="cvv" required> <br>
+  
+    <button class="btn btn-primary" type="submit" (click)="addStudInfo()">Add Student Info</button>
+  </form>
+  
