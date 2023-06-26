@@ -1,0 +1,28 @@
+{
+  "staff": [
+    {
+      "id": 2,
+      "name": "Sadhana",
+      "class": "B",
+      "department": "Computer Science",
+      "subject": "computernetworks"
+    },
+    {
+      "name": "Shree",
+      "class": "A",
+      "department": "Electronics and Communication",
+      "subject": "verilogdesign",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

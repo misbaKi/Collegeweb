@@ -1,9 +1,0 @@
-
-  
-  <form [formGroup]="feesForm">
-    <div>
-      <h2>Fee Information</h2>
-      <ng-container *ngFor="let fees of applicableFee">Applicable Fee:{{fees}}</ng-container> <br> <br>
-      <button class="btn btn-primary" (click)="payAmount()">Pay Amount</button>
-    </div>
-  </form>
