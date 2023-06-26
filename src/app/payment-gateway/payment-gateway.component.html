@@ -1,0 +1,15 @@
+<div>
+    <h2>Payment Gateway</h2>
+    <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" required ngModel>
+
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" id="expiryDate" name="expiryDate" required ngModel>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required ngModel>
+
+        <button class="btn btn-primary" type="submit" (click)="pay()">Pay Now</button>
+    </form>
+</div>

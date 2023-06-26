@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 body {
-    /* background-image: url(nature.jpg); */
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+    background-color: #070A52;
+    color: #ffffff;
 }
 .homeimg{
     background-size: 100%;
@@ -16,20 +17,29 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+   
+}
+
+a{
+    text-decoration: none;
 }
 
 nav {
+<<<<<<< HEAD
     background-color: #0c134c;
     height: 80px;
     width: 100%;
     /* margin-bottom: 24%; */
+=======
+    background-color: #24262b;
+    height: 100px;
+    width: 100%;
+>>>>>>> dc955f3502b61d2e06e19c2458763cb1bf895c8f
 }
 
 label.logo {
     color: white;
     font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
     font-weight: bold;
 }
 
@@ -67,7 +77,11 @@ nav ul li a {
 .footer {
     background-color: #0c134c;
     padding: 70px 0;
+<<<<<<< HEAD
     position: sticky;
+=======
+    position: relative;
+>>>>>>> dc955f3502b61d2e06e19c2458763cb1bf895c8f
     width: 100%;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -78,6 +92,9 @@ nav ul li a {
     padding: 0 15px;
 }
 
+.footer-col ul{
+    padding-left: 0;
+}
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
@@ -100,6 +117,7 @@ nav ul li a {
 
 .footer-col ul li:not(:last-child) {
     margin-bottom: 10px;
+   
 }
 
 .footer-col ul li a {
@@ -137,3 +155,143 @@ nav ul li a {
     background-color: #ffffff;
 
 }
+
+
+
+.panel{
+    background:#2980b9;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+    width: 1100px;
+    
+}
+
+.panel .panel-heading{
+    padding: 20px 15px;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+}
+.panel .panel-heading .title{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 40px;
+    margin: 0;
+}
+.panel .panel-heading .btn{
+    color: rgba(255,255,255,0.5);
+    background: transparent;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{
+    color: #fff;
+    text-shadow: 3px 3px rgba(255,255,255,0.2);
+}
+.panel .panel-heading .form-control{
+    color: #fff;
+    background-color: transparent;
+    width: 35%;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .form-control:focus{
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: none;
+    outline: none;
+}
+.panel .panel-heading .form-control::placeholder{
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    font-weight: 500;
+}
+.panel .panel-body{ 
+    padding: 0; 
+    height: 100vh;
+    overflow: hidden;
+    width: 1100px;
+ 
+}
+.panel .panel-body .table thead tr th{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px;
+    border: none;
+}
+.panel .panel-body .table tbody tr td{
+   color: black;
+    font-size: 15px;
+    padding: 10px 12px;
+    vertical-align: center;
+    border: none;
+}
+.panel .panel-body .table tbody tr:nth-child(even){ background-color: rgba(255,255,255,0.05); }
+.panel .panel-body .table tbody .action-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.panel .panel-body .table tbody .action-list li a{
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:hover{ text-shadow: 3px 3px 0 rgba(255,255,255,0.3); }
+.panel .panel-body .table tbody .action-list li a:before,
+.panel .panel-body .table tbody .action-list li a:after{
+    content: attr(data-tip);
+    color: #fff;
+    background-color: #111;
+    font-size: 12px;
+    padding: 5px 7px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    display: none;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: -32px;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    border-radius: 0;
+    transform: translateX(-50%) rotate(45deg);
+    top: -18px;
+    z-index: -1;
+}
+.panel .panel-body .table tbody .action-list li a:hover:before,
+.panel .panel-body .table tbody .action-list li a:hover:after{
+    display: block;
+}
+
+.form-label{
+    color: #111;
+}
+
+.table-container {
+    height: 500px;
+    overflow-y: auto; 
+  }
+  
