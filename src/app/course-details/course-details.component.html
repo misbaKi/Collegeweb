@@ -1,0 +1,89 @@
+
+<main>
+    <div class="toolbar">
+        <div class="add-category">
+            <button style="margin-top: 6px; margin-left: 6px; color: #ffffff;" class="btn btn-primary" data-bs-toggle="modal"  (click)="clickAddCourse()" 
+                data-bs-target="#exampleModal"><i class="bi bi-book"></i> ADD Course Details</button>
+        </div>
+    </div>
+</main>
+
+<div class="container page-container" style="color: #DAFFFB;" >
+    <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12" *ngFor="let row of CourseData" >
+            <figure class="user-card green">
+                <figcaption>
+                    <h3>{{row.name}}</h3>
+                    <h5>{{row.email}}</h5>
+                    <h5>{{row.mobile}}</h5>
+                    <h5>{{row.time}}</h5>
+                    <p style="display: inline; color: #DAFFFB;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente error iusto laboriosam fugiat aut similique dicta consequatur dolor, suscipit iste.</p>
+                    <div>
+                        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        (click)="onEdit(row)"><i class="bi bi-pencil-fill"></i> Edit</button>
+                    <button class="btn btn-danger mx-3" (click)="deleteCourse(row)"> <i class="bi bi-trash"></i> Delete</button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: #001C30;">Course Details</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="color: #001C30;">
+                <form [formGroup]="Courseform">
+
+                    <div class="form-group mb-2">
+                        <label for="name">Course Name</label>
+                        <input type="text" class="form-control" formControlName="name" placeholder="Enter  Course Name">
+                    </div>
+                    <span class="text-danger"
+                        *ngIf="Courseform.controls['name'].dirty && Courseform.hasError('required','name')">Course nameis
+                        required </span>
+        
+                    <div class="form-group mb-2">
+                        <label for="name">Eligibility</label>
+                        <input type="text" class="form-control" formControlName="email" placeholder="Enter Eligibility ">
+                    </div>
+                    <span class="text-danger"
+                        *ngIf="Courseform.controls['name'].dirty && Courseform.hasError('required','email')">Eligibility
+                        required </span>
+
+                        <div class="form-group mb-2">
+                            <label for="name">Course Duaration</label>
+                            <input type="text" class="form-control" formControlName="time"
+                                placeholder="Enter Course Duaration">
+                        </div>
+                        <span class="text-danger"
+                            *ngIf="Courseform.controls['time'].dirty && Courseform.hasError('required','time')">Duaration
+                             is required </span>
+                  
+                   
+                    <div class="form-group mb-2">
+                        <label for="name">Academic Year</label>
+                        <input type="date" class="form-control" formControlName="mobile"
+                            placeholder="Enter Academic Year">
+                    </div>
+                    <span class="text-danger"
+                        *ngIf="Courseform.controls['mobile'].dirty && Courseform.hasError('required','mobile')">Academic Year
+                         is required </span>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-danger" data-bs-dismiss="modal"> <i class="bi bi-x-square"></i> Close</button>
+                <button type="button" (click)="addCourse()" class="btn btn-success" *ngIf="showAdd"><i class="bi bi-folder-plus"></i> Add</button>
+                <button type="button" (click)=" updateCourse()" class="btn btn-primary" *ngIf="showUpdate"><i class="bi bi-pencil-fill"></i> Update</button>
+            </div>
+        </div>
+    </div>
+</div>

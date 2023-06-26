@@ -1,0 +1,53 @@
+{
+  "post": [
+    {
+      "name": " Engg👨‍🎓",
+      "mobile": "2023-06-07",
+      "email": "10+2 Eligible",
+      "time": "Duaration is 4years",
+      "id": 1
+    },
+    {
+      "name": "BCA ",
+      "mobile": "2023-06-13",
+      "select": null,
+      "email": "Yes",
+      "time": "3 Years",
+      "id": 2
+    },
+    {
+      "name": "MCA",
+      "mobile": "2023-06-30",
+      "select": null,
+      "email": "yes",
+      "time": "2 years",
+      "id": 3
+    },
+    {
+      "name": "M.tech",
+      "mobile": "2023-06-23",
+      "select": null,
+      "email": "yes",
+      "time": "2 years",
+      "id": 4
+    },
+    {
+      "name": "hhhjj",
+      "mobile": "2023-06-09",
+      "select": null,
+      "email": "kkk",
+      "time": "www",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
