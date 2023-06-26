@@ -1,0 +1,99 @@
+<a class="dropdown-item"><button type="button" class="btn" data-bs-toggle="modal" (click)="clickAddstaffdata()"
+    data-bs-target="#exampleModal" style="background-color: #8469e6;">
+    ADD Staff
+</button></a>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Faculty Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="staffform">
+                <div class="form-group mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" formControlName="name" name="name" class="form-control" id="name"
+                        aria-describedby="emailHelp" placeholder="Enter Name">
+                    <span style="color: red;" *ngIf="name && name.invalid && name.touched">This input
+                        field is not valid</span>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="class">Class</label>
+                    <input type="text" formControlName="class" name="class" class="form-control" id="class"
+                        aria-describedby="emailHelp" placeholder="Enter Class">
+                    <span style="color: red;" *ngIf="class && class.invalid && class.touched">This input
+                        field is not valid</span>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="department">Department</label>
+                    <select class="form-select" formControlName="department" name="department" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option>Electronics and Communication</option>
+                        <option>Electrical and Electronics</option>
+                        <option>Computer Science</option>
+                        <option>Information science</option>
+                        <option>Mechanical Engineering</option>
+                        <option>Civil Engineering</option>
+                    </select>
+                    <span style="color: red;" *ngIf="department && department.invalid && department.touched">This
+                        input field is not valid</span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="subject">Subject</label>
+                    <input type="subject" formControlName="subject" name="subject" class="form-control"
+                        id="subject" aria-describedby="emailHelp" placeholder="Enter Subject">
+                    <span style="color: red;" *ngIf="subject && subject.invalid && subject.touched">This
+                        input field is not valid</span>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            <button   *ngIf="showadd" (click)="poststaff()"  type="button" class="btn btn-success">ADD</button>
+            <button  *ngIf="showupdate"   (click)="updatestaff()"type="button" class="btn btn-success">Update</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid mt-4 ms-3">
+    <div class="row">
+      <div class="col-md-6  col-xl-4" *ngFor="let row of staffData">
+        <div class="card me-4 ms-4"
+          style="width: 18rem;height:23rem;margin-bottom:3px ;margin-top:4px; padding-bottom:0px; border-radius: 15px;">
+          <div class="card-body">
+            <div>
+                <label for="name">Name</label>
+                <p>{{row.name}}</p>
+            </div>
+            <div>
+                <label for="name">Class</label>
+                <p>{{row.class}}</p>
+            </div>
+            <div>
+                <label for="name">Department</label>
+                <p>{{row.department}}</p>
+            </div>
+            <div>
+                <label for="name">Subject Handeled</label>
+                <p>{{row.subject}}</p>
+            </div>
+            <div class="cardfooter">
+              <button type="button" (click)="deletestaff(row)" class="btn btn-danger "><i
+                  class="fa-solid fa-trash-can"></i></button>
+              <button type="button" (click)="onEdit(row)" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal"><i class="fa-solid fa-pen"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
